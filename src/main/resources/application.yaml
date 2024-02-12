@@ -1,0 +1,19 @@
+server:
+  port: 8285
+
+spring:
+  application:
+    name: app-employee
+  datasource:
+    url: jdbc:h2:mem:app-employee;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false
+    username: sa
+    password: password
+  #    driver-class-name: org.h2.Driver
+  jpa:
+    database: h2
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
